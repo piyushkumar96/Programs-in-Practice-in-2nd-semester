@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<ctype.h>
+#include<conio.h>
+#include<string.h>
+  main()
+ {int i;
+  char str[50];
+  printf(" enter the word (MAXIMUM 50) \t");
+  scanf("%s",str);
+	
+ for( i=0;str[i]!='\0';i++)
+ {  if(islower(str[i]))
+  
+  str[i]=toupper(str[i]);
+else
+  str[i]=tolower(str[i]);
+  }
+  printf(" string ( 'lowercase to  uppercase' and '  uppercase to  lowercase') is %s \t",str);
+ 
+  getch();
+  }

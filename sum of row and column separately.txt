@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+      int a[10][10],i,j,m,n;
+      clrscr();
+      printf("\nEnter Order of Matrix : ");
+      scanf("%d%d",&m,&n);
+      printf("\nEnter Elements : ");
+      for(i=0;i<m;i++)
+           for(j=0;j<n;j++)
+                scanf("%d",&a[i][j]);
+                for(i=0;i<m;i++)
+                    {
+                          a[i][n]=0;
+                          for(j=0;j<n;j++)
+                               a[i][n]+=a[i][j];
+                     }
+                          for(j=0;j<n;j++)
+                              {
+                                 a[m][j]=0;
+                                 for(i=0;i<m;i++)
+                                      a[m][j]+=a[i][j];
+                               }
+                                 a[m][n]=0;
+                                 for(i=0;i<m;i++)
+                                       a[m][n]+=a[i][n];
+                                       for(i=0;i<m+1;i++)
+                                           {
+                                              for(j=0;j<n+1;j++)
+                                                  {
+                                                       printf("%d",a[i][j]);
+                                                       printf(" ");
+                                                   }
+                                                       printf("\n");
+                                            }
+                                                       getch();
+}

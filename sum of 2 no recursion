@@ -1,0 +1,20 @@
+#include<stdio.h>    
+int getsum(int m,int n)
+{  int p=m;
+if(n==0)
+return m;
+else if (m==0)
+return n;
+else
+return(getsum(m,n-1)+ 1); 
+}    
+
+void main()    
+{    
+    int m,n,sum;    
+    int getsum(int,int );
+    printf("enter the no\t");
+    scanf("%d%d",&m,&n);    
+    sum=getsum(m,n);    
+    printf(" sum of two  no is %d",sum);    
+}

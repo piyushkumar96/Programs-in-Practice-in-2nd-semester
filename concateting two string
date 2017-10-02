@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<string.h>
+main()
+{
+char str1[30],str2[90];
+printf("concating the two  string\n");
+printf("enter the  two string \t");
+scanf("%s%s", &str1,&str2);
+strcat(str1,str2);
+printf("\nthe  concated string is\t %s", str1);
+printf("\nthe without concating string 2 is \t%s",str2);
+}

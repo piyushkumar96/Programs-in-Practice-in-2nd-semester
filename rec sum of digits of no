@@ -1,0 +1,22 @@
+#include<stdio.h>    
+
+int getsum(int m)
+{  int a,b;
+static int p=0;
+if(m>0)
+{a=m%10;
+p=p+a;
+getsum(m/10); 
+}    
+return p;
+}
+
+void main()    
+{    
+    int m,n,sum;    
+    int getsum(int);
+    printf("enter the no\t");
+    scanf("%d",&n);    
+    sum=getsum(n);    
+    printf(" sum of digits of no is %d",sum);    
+}

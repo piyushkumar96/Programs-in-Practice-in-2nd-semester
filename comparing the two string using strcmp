@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+main()
+{
+char str1[30],str2[90];
+printf("comparing the two  string\n");
+printf("enter the  two string \t");
+scanf("%s%s", &str1,&str2);
+int a = strcmp(str1,str2);
+printf("\nthe  comparing two  strings give \t %d", a);
+getch();
+}

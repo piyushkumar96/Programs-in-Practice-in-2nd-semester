@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include <conio.h>
+main()
+{ int a,b,c ;
+printf("enter the three number ");
+scanf("%d%d%d",&a,&b,&c);
+if((a>b)&&(a>c))
+{ 
+  printf(" largest of three no enter is %d",a);
+}
+if((b>c)&&(b>a))
+ printf("the largest of three is %d",b);
+if((c>a)&&(c>b))
+ printf(" largest of three is %d",c);
+getch() ;
+}
+ 

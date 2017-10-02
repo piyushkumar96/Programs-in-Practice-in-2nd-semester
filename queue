@@ -1,0 +1,80 @@
+ #include<stdio.h>
+  #include<conio.h>
+#include<stdlib.h> 
+ # define size 5
+ int rear=-1,front=-1,n=0;
+  void QINSERT(int queue[ ],int item) 
+  {
+  	if(rear==size-1) 
+  	{
+  		printf("\nOVERFLOW");
+  	 } 
+  	 else if((front==-1)&&(rear==-1))
+  	  {front=0;rear=0;
+  	  queue[rear]=item;
+  	 n++;
+  	  }
+  	  else
+  	 { rear++;
+  	 queue[rear]=item;
+  	 n++;
+  	 
+  	  } 
+  	  
+}
+ int QDELETE(int queue[ ])
+  { int temp;
+  	
+  	
+  	  if((front==-1) ||(front>rear))
+  	 { printf("\n UNDERFLOW");
+  	   }
+  	   
+  	       else
+  	    {  
+  	    	 int temp=queue[front]; 
+            	  front++;
+            	  n--;
+  	    	  return (temp); 
+  	    	
+  	    }
+  }
+  
+  void DISPLAY(int queue[])
+   {
+   if ((front==-1)||(front>rear))
+   	 printf("queue empty\n"); 
+   	 else
+   	  {
+   	  	 for(int i=front;i<=rear;i++)
+   	  	 printf("%d\t", queue[i]);
+   
+           } 
+      } 
+  void main() 
+  {
+  	int queue[size],item,res,p;
+  clrscr(); 
+  while(1)
+  {
+printf("\nenter the choice to \n 1.insert \n 2. delete  \n 3. display \n 4. exit \n");
+scanf("%d",&p);
+switch(p)
+{case 1:
+   	printf("\n Enter the ITEM for insertion:"); 
+   	scanf("%d",&item);
+   	 QINSERT(queue ,item);
+   break;
+   case 2:
+              res=QDELETE(queue); 
+               if(n>=0)
+           printf("\n Deleted element is %d:",res);
+              break;
+    case 3:
+ printf("\n The queue is :\n"); DISPLAY(queue); 
+ break;
+ case 4:exit(1);
+  }
+  }
+   	   getch(); 
+}

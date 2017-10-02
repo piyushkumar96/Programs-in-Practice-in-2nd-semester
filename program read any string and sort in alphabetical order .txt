@@ -1,0 +1,25 @@
+
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+void main()
+{
+  char st[25],temp;
+  int l,i,j;
+  clrscr();
+ 
+  printf("enter Any Sting\n");
+  gets(st);
+  l=strlen(st);
+  for(i=1;i<l;i++)
+     for(j=0;j<l-i;j++)
+	if(st[j]>st[j+1])
+	{
+	   temp=st[j];
+	   st[j]=st[j+1];
+	   st[j+1] =temp;
+	}
+  printf("sorted string acc. alphabetical  \n");
+  printf("%s",st);
+  getch();
+}

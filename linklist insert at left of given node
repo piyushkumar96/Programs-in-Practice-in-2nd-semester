@@ -1,0 +1,122 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+int n=0;
+struct listack
+{ int a;
+struct listack *next;
+}*start=NULL,*curr=NULL,*ptr=NULL,*del=NULL,*ptr1=NULL;
+  void PUSH()
+  { n++;
+	if(start==NULL)
+	  {  printf("\n creating the first node");
+	  ptr=malloc(sizeof(struct listack));
+	  printf("\nenter the no to insert ");
+	  scanf("%d",&ptr->a);
+	  ptr->next=NULL;
+	  start=ptr;
+	  curr=ptr;
+	  }
+	  else
+	 { ptr=malloc(sizeof(struct listack));
+	  printf("enter the no to insert ");
+	  scanf("%d",&ptr->a);
+	  ptr->next=NULL;
+	  curr->next=ptr;
+	  curr=ptr;
+	  }
+	  }
+	 void INSERTLEFT()
+	 {  int q;
+	 ptr=malloc(sizeof(struct listack));
+	  printf("enter the no to insert ");
+	  scanf("%d",&ptr->a);
+	  printf("enter the item before you want to insert");
+	  scanf("%d",&q);
+	  ptr1=start;
+	  del=ptr1->next;
+	  while(del!=NULL)
+	  {  if(ptr1->a==q)
+	        { ptr->next=start;
+	           start=ptr;
+	           n++;
+	           break;
+	        }
+	     
+	  else 	 if(del->a==q)
+	  { 
+	  ptr->next=del;
+	  ptr1->next=ptr;
+	  n++;break;
+	  }
+	  else
+	  { ptr1=del;
+	  del=del->next;
+	  }
+	  
+	  }
+	 }
+void POP()
+  { int p;
+   if(n>0)
+   {  printf("\nenter the item to delete");
+       scanf("%d",&p);
+       ptr=start;
+       del=ptr->next;
+      if(ptr->next==NULL)
+         n=0;
+        else
+        {
+      while(del!=NULL)
+      {  if(ptr->a==p)
+         { start =del;
+            n--;
+         }
+       if(del->a==p)
+          {  ptr->next=del->next;
+             n--;
+             break;
+           }
+          else
+          {ptr=del;
+            del=del->next;
+          }
+        }
+      }
+   }
+    if(n==0)
+    {start=NULL;
+    printf("\n now no node to delete\n ");
+    }
+  }
+  void DISPLAY()
+   { if(start==NULL)
+   printf("\n no node to display\n ");
+   else
+  {   ptr=start;
+        while(ptr!=NULL)
+         {       printf("%d \t", ptr->a);
+	             ptr=ptr->next;
+         }
+   }
+   printf(" \n the total no. of node is %d",n);
+   }
+  void main()
+  {
+	int ch;
+  clrscr();
+  while(1)
+  {
+ printf("\n enter the choice to \n 1.push \n 2.insertleft \n 3.pop \n 4.display  \n 5.exit");
+ scanf("%d",&ch);
+ switch(ch)
+ { case 1: PUSH();break;
+  case 2 : INSERTLEFT();break;
+ case 3 : POP();break;
+ case 4 : DISPLAY();break;
+ case 5 : exit(1);
+ defaut: printf(" \n you have enter wrong choice");
+ }
+ }
+   getch();
+}

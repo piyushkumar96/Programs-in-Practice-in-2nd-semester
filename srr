@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include <conio.h>
+struct stu
+{ int rn;
+int regno.;
+} a[50];
+main()
+{ int i,n;
+printf("enter the no of student");
+scanf("%d",&n);
+
+printf("\nenter the rollno and regno ");
+for(i=1;i<=n;i++)
+{ printf("student no %d",i); 
+scanf("%d",&a[i].rn,&a[i].regno);
+}
+
+printf("\nenter the rollno and regno ");
+for(i=1;i<=n;i++)
+{ printf("student no %d",i); 
+getch();
+}

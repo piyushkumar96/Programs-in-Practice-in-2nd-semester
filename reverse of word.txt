@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<ctype.h>
+#include<conio.h>
+#include<string.h>
+ main()
+ {
+  char x[25];
+  printf(" enter the word to reverse it ");
+  scanf("%s",&x);
+  printf(" the reverse of word is  ",strrev(x)) ;
+getch();
+  }

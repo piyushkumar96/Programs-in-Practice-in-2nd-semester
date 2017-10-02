@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include<conio.h>
+#define max(x,y) if(x>y) return(x) else return(y)
+void main()
+{ int x,y,p;
+scanf("%d%d",&x,&y);
+p=max(x,y);
+printf("%d",p);
+getch();
+}

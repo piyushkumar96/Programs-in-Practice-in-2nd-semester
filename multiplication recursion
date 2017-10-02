@@ -1,0 +1,22 @@
+#include<stdio.h>    
+int prod(int m,int n)
+{    int x;
+    if(n==1)
+    return (m);
+    else if (m==0||(n==0))
+    return(0);   
+    else
+    {    x=(prod(m,n-1)+m);    
+       return(x);
+    }
+}    
+
+void main()    
+{    
+    int n,m,prod1;    
+    int prod(int ,int );
+    printf("enter the two for product no\t");
+    scanf("%d%d",&m,&n);    
+    prod1=prod(m,n);    
+    printf(" product of two no is %d",prod1);    
+}

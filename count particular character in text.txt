@@ -1,0 +1,23 @@
+#include <stdio.h>
+ #include<string.h>
+ #include<conio.h>
+main()
+{
+   int c,i,j, n;
+ char str[100],ch;
+   printf("Enter the string \n");
+ scanf("%s",str);
+ c=strlen(str) ;
+ 
+   for (i = 0; i <c; i++)
+   {n=0;
+    for( j=0;j<c;j++)
+   {
+      if (str[i] == str[j]) 
+       n++;
+   } 
+         printf("total no character %c   in text is %d\n",str[i],n);
+     
+   }
+   getch();
+}

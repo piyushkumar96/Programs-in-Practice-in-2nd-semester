@@ -1,0 +1,17 @@
+#include<stdio.h>    
+void main()    
+{    
+    int a=-1,b=1,c=0,i,n,sum=0;
+    printf("enter the limit ");
+    scanf("%d",&n);    
+   printf("the fibonacci series is ");
+   for(i=1;i<=n;i++)
+   {c=a+b;
+   printf("%d\t",c);
+   sum=sum+c;
+   a=b;
+   b=c;
+   }
+   
+    printf("\n sum of fibonacci series is %d",sum);    
+}

@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <conio.h>
+struct stu
+{
+char name [ 50 ];
+int rlno ;
+int s1,s2,s3;
+};
+void per ( struct stu t );
+ main ( )
+{
+struct stu s; 
+per( s);
+getch();
+}
+void per ( struct stu t)
+{ float percent ;
+ 
+printf("\n enter the roll no\n");
+scanf("%d",&t.rlno);
+printf("\n enter the name \n");
+scanf("%s",t.name);
+printf("\n enter the mark subject 1=");
+scanf("%d",&t.s1);
+printf("\n enter the mark subject 2=");
+scanf("%d",&t.s2);
+printf("\n enter the mark subject 3=");
+scanf("%d",&t.s3);
+percent=((t.s1+t.s2+t.s3)
+/3);
+printf("%s got %f  percentage in exam",t.name,percent);
+}

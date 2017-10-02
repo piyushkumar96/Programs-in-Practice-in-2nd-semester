@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include <conio.h>
+main()
+{ int i,a[5],s;
+printf("assign the value to element of array\n enter five value ");
+for(i=0;i<=4;i++)
+ {scanf("%d",&a[i]);
+ }
+ for(i=0;i<=4;i++)
+ {
+ printf("array[%d] =%d\t",i,a[i]);
+ printf("\n");
+ }
+getch() ;
+}
+ 

@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include<string.h>
+main()
+{
+char str[95];
+printf("To check length of given string\n");
+printf("enter the string \t");
+scanf("%s", &str);
+int i=strlen(str);
+printf("the length of given string is %d", i);
+}

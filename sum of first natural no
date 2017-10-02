@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include <conio.h>
+main()
+{ int a,sum=0;
+printf("enter the number upto which. you want sum of natural no: — ");
+scanf("%d",&a);
+ int b=1;
+do
+{ sum =sum+b;
+ b++;
+}while(b<=a) ;
+printf("sum of  first %d natural no. is %d",a,sum);
+getch() ;
+}
+ 

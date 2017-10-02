@@ -1,0 +1,19 @@
+
+#include<stdio.h>
+#include<math.h>
+#include<conio.h>
+int main()
+{int time,ci=0,p,i,rate;
+ printf("Enter principal amount : ");
+ scanf("%d", &p);
+ printf("Enter interest rate : ");
+ scanf("%d", &rate);
+ printf("Enter time period in year : ");
+ scanf("%d", &time);
+for(i=1;i<=time;i++)
+{ 
+ ci=ci+p*(pow((1+rate/100),i)-1);
+ printf("\nCompound interest for %d year = %d",i,ci);
+ }
+return 0;
+}

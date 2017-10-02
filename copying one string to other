@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<string.h>
+main()
+{
+char str1[30],str2[90];
+printf("copying one  string to other\n");
+printf("enter the  two string \t");
+scanf("%s%s", &str1,&str2);
+strcpy(str2,str1);
+printf("\nthe  copied string  is\t %s", str2);
+printf("\n without copied string  is \t%s",str1);
+}

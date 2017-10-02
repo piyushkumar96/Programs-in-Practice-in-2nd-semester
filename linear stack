@@ -1,0 +1,68 @@
+ #include<stdio.h>
+  #include<conio.h>
+ # define size 5
+ int top=-1,n=0;
+  void PUSH(int stack[ ] , int item) 
+  {
+  	if(top==size-1) 
+  	{
+  		printf("\nOVERFLOW");
+  	
+  	 } 
+  	 else 
+  	 { top++; 
+  	 stack[top]=item;
+  	 n++;
+  	  } 
+}
+ int POP(int stack[ ])
+  { int temp;
+  	 if(top==-1) 
+  	 { printf("\n UNDERFLOW");
+  	   }
+  	    else  
+  	    {
+  	    	 int temp=stack[top]; 
+  	    	 top--;
+  	    	  n--;
+  	    	  return (temp); 
+  	    }
+  	    	  } 
+  void DISPLAY(int stack[])
+   {
+   	 if (top==-1) 
+   	 printf("Stack empty"); 
+   	 else
+   	  {
+   	  	 for(int i=0 ;i<=top;i++)
+   	  	 printf("%d\t", stack[i]);
+   
+           } 
+      } 
+  void main() 
+  {
+  	int stack[size],item, res,s,p;
+  clrscr(); 
+ while(1)
+ {
+printf("\n enter the choice to \n 1.push \n 2. pop \n 3. display\n 4. exit \n");
+scanf("%d",&p);
+switch(p)
+{case 1:
+   	printf("\n Enter the ITEM for insertion:"); 
+   	scanf("%d",&item);
+   	 PUSH(stack,item);
+   break;
+   case 2:
+    res=POP(stack); 
+    if(top>=-1)
+{    printf("\n Deleted element is  %d:",res);}
+    break;
+    case 3:
+ printf("\n The stack is : "); DISPLAY(stack); 
+ break;
+ case 4:exit(1);
+  }
+ }
+   	   getch(); 
+}

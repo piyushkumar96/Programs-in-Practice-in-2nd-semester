@@ -1,0 +1,29 @@
+#include<stdio.h>    
+#include<conio.h>
+int isprime(int n)
+{  static int i=2;
+
+if(i<=n/2)
+{ if(n%i==0)
+return 0;
+else
+{i++;
+isprime(n);
+}
+}
+return 1;
+}
+
+void main()    
+{    
+    int m,prime;    
+    int isprime(int );
+    printf("enter the no\t");
+    scanf("%d",&m);    
+    prime=isprime(m);    
+    if(prime==1)
+    printf(" no. is prime ");    
+    else
+    printf("no. is not prime");
+    getch();
+}

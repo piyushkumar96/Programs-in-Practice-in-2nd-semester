@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include <conio.h>
+main()
+{ int a,c;
+printf("enter the number to find its factorial : — ");
+scanf("%d",&a);
+ int b=1;
+ for(c=a;c>0;c--)
+ { b =b*c;}
+ printf("the factorial of %d is %d",a,b);
+
+getch() ;
+}
+ 

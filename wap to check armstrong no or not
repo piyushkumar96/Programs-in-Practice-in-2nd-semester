@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include <conio.h>
+main()
+{ int a,temp,s=0,b;
+printf("enter the number ");
+scanf("%d",&a);
+temp = a;
+while (a>0)
+{ b=a%10;
+s= s+b*b*b;
+a=a/10;
+}
+if(temp==s)
+printf("armstrong number ");
+else
+printf("not armstrong no");
+getch();
+}
